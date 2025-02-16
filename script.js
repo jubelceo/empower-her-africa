@@ -60,79 +60,42 @@ window.addEventListener('click', (e) => {
 });
 
 // Search Functionality
-function debounce(func, delay) {
-    let timeout;
-    return function (...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), delay);
-    };
-}
-
-window.searchSite = debounce(() => {
+window.searchSite = () => {
     const query = document.getElementById('search-input').value.toLowerCase();
     document.querySelectorAll('section').forEach(section => {
         if (section.textContent.toLowerCase().includes(query)) section.scrollIntoView({ behavior: 'smooth' });
     });
-}, 300);
+};
 
 // Video Controls
-let isPlaying = false;
-window.toggleVideo = () => {
-    const video = document.getElementById('youtubeVideo');
-    if (isPlaying) {
-        video.src = video.src.replace("&autoplay=1", "");
-    } else {
-        video.src += "&autoplay=1";
-    }
-    isPlaying = !isPlaying;
-};
+window.playVideo = () => document.getElementById('youtubeVideo').src += "&autoplay=1";
+window.pauseVideo = () => document.getElementById('youtubeVideo').src = document.getElementById('youtubeVideo').src.replace("&autoplay=1", "");
+window.halfSize = () => { const v = document.getElementById('youtubeVideo'); v.width = 450; v.height = 253; };
+window.normalSize = () => { const v = document.getElementById('youtubeVideo'); v.width = 900; v.height = 506; };
 
 // Mobile Menu Toggle
 document.querySelector('.menu-toggle').addEventListener('click', () => {
     const navUl = document.querySelector('nav ul');
     navUl.classList.toggle('active');
+    const isExpanded = document.querySelector('.menu-toggle').getAttribute('aria-expanded') === 'true';
+    document.querySelector('.menu-toggle').setAttribute('aria-expanded', !isExpanded);
 });
 
 // Form Validation
 document.getElementById('volunteer-form').addEventListener('submit', (e) => {
-    e.preventDefault();
     const name = document.getElementById('volunteer-name').value;
     const email = document.getElementById('volunteer-email').value;
     if (!name || !email) {
+        e.preventDefault();
         alert('Please fill out all required fields.');
-    } else {
-        alert('Thank you for signing up! We will contact you soon.');
-        e.target.reset();
     }
 });
 
 document.getElementById('donation-form').addEventListener('submit', (e) => {
-    e.preventDefault();
     const cardNumber = document.getElementById('card-number').value;
     const amount = document.getElementById('amount').value;
     if (!cardNumber || !amount) {
+        e.preventDefault();
         alert('Please fill out all required fields.');
-    } else {
-        alert('Thank you for your donation!');
-        e.target.reset();
     }
-});
-
-// Back to Top Button
-window.addEventListener('scroll', () => {
-    const backToTopButton = document.getElementById('back-to-top');
-    if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-    } else {
-        backToTopButton.style.display = 'none';
-    }
-});
-
-document.getElementById('back-to-top').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// Loading Spinner
-window.addEventListener('load', () => {
-    document.getElementById('loading-spinner').style.display = 'none';
 });

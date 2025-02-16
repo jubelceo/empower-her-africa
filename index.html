@@ -1,174 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empower Her Africa</title>
-    <meta name="description" content="Empower Her Africa is dedicated to empowering girls through menstrual health education and resources. Join us in making a difference.">
-    <meta name="keywords" content="Empower Her Africa, menstrual health, girls' education, empowerment, donate, volunteer">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Verlag&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empower Her Africa</title>
+<meta name="description" content="Empower Her Africa is dedicated to empowering girls through menstrual health education and resources. Join us in making a difference.">
+<meta name="keywords" content="Empower Her Africa, menstrual health, girls' education, empowerment, donate, volunteer">
+<meta name="author" content="Empower Her Africa">
+<meta property="og:title" content="Empower Her Africa">
+<meta property="og:description" content="Empowering girls through menstrual health education and resources.">
+<meta property="og:image" content="Empower Her Africa-Photoroom 1-Photoroom.png">
+<meta property="og:url" content="https://www.empowerherafrica.org">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Verlag&display=swap" rel="stylesheet">
+<script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="Empower Her Africa-Photoroom 1-Photoroom.png" alt="Empower Her Africa Logo" class="logo" loading="lazy"/>
-        </div>
-        <h1>Empower Her Africa</h1>
-    </header>
-    <nav>
-        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-        <ul>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#aims">Aims (2025-2027)</a></li>
-            <li><a href="#volunteer">Get Involved</a></li>
-            <li><a href="#donate">Donate</a></li>
-            <li><a href="#socials">Contact Us</a></li>
-            <li>
-                <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Search...">
-                    <button onclick="searchSite()" aria-label="Search">Search</button>
-                </div>
-            </li>
-            <li><button id="login-btn" class="donate-btn">Login</button></li>
-        </ul>
-    </nav>
-    <div class="hero">
-        <div class="slider-container">
-            <div class="slider" id="slider">
-                <img src="File-1487928249.jpg" alt="Empowerment Image 1" loading="lazy">
-                <img src="p1020690-1_wide-f018d7cebff1b67189219224d0232cd694961d71.jpg" alt="Empowerment Image 2" loading="lazy">
-                <img src="HAGEP-Kenya-630x473.jpg" alt="Empowerment Image 3" loading="lazy">
-            </div>
-            <div class="slider-navigation">
-                <button class="arrow" id="prev" aria-label="Previous Slide" aria-hidden="true">&#10094;</button>
-                <button class="arrow" id="next" aria-label="Next Slide" aria-hidden="true">&#10095;</button>
-            </div>
-            <div class="slider-dots" id="dots"></div>
-        </div>
-    </div>
-    <div class="container" id="main-content">
-        <section id="mission">
-            <h2>Our Mission</h2>
-            <p>Empowering girls through menstrual health education and resources.</p>
-        </section>
-        <section id="team" class="team-section">
-            <h2>About Our CEO & Team</h2>
-            <p>Mr. Jubel Sherif is the visionary founder and CEO of Empower Her Africa. As a passionate advocate for youth and girls' empowerment, he is committed to making a lasting impact in Liberia by addressing menstrual health, education, and social support for vulnerable girls. With experience in leadership and community engagement, he drives the mission of Empower Her Africa with dedication and innovation.</p>
-            <p>Behind him stands a powerful team of passionate individuals who share the same vision. Our team is made up of skilled professionals, volunteers, and advocates working tirelessly to create opportunities for girls through education, mentorship, and sustainable development projects. Together, we are building a future where every girl has the support and resources she needs to thrive.</p>
-            <div class="team-member">
-                <img src="ceo.jpg" alt="CEO Jubel Sherif - Founder & CEO" loading="lazy">
-                <h3>CEO Jubel Sherif</h3>
-                <p>Founder & CEO</p>
-            </div>
-            <div class="team-member">
-                <img src="team 1.jpg" alt="Team Member 1 - Role" loading="lazy">
-                <h3>Team Member 1</h3>
-                <p>Role</p>
-            </div>
-            <div class="team-member">
-                <img src="WhatsApp Image 2025-02-06 at 04.47.24_73725c94.jpg" alt="Team Member 2 - Role" loading="lazy">
-                <h3>Team Member 2</h3>
-                <p>Role</p>
-            </div>
-        </section>
-        <section id="aims">
-            <h2>Our Aims (2025-2027)</h2>
-            <div class="features">
-                <div class="feature-box">Expand to 10 More Countries</div>
-                <div class="feature-box">Distribute 50,000+ Pads Annually</div>
-                <div class="feature-box">Increase Workshops to 1,000+</div>
-            </div>
-            <button class="donate-btn">Support Our Mission</button>
-        </section>
-        <section id="volunteer" class="volunteer-section">
-            <h2>Become a Volunteer</h2>
-            <p>Join us in making a difference. Sign up today!</p>
-            <form id="volunteer-form">
-                <div class="form-group">
-                    <label for="volunteer-name">Name</label>
-                    <input type="text" id="volunteer-name" name="volunteer-name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="volunteer-surname">Lastname</label>
-                    <input type="text" id="volunteer-surname" name="volunteer-surname" placeholder="Enter your Lastname" required>
-                </div>
-                <div class="form-group">
-                    <label for="volunteer-email">Email</label>
-                    <input type="email" id="volunteer-email" name="volunteer-email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="volunteer-phone">Phone Number</label>
-                    <input type="tel" id="volunteer-phone" name="volunteer-phone" placeholder="Enter your phone number" required>
-                </div>
-                <button type="submit" class="volunteer-btn">Sign Up</button>
-            </form>
-        </section>
-        <section id="donate" class="donate-section">
-            <h2>Support Our Cause</h2>
-            <p>Your donation helps provide menstrual health education and supplies.</p>
-            <form id="donation-form">
-                <div class="form-group">
-                    <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="card-number">ATM Card Number</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
-                </div>
-                <div class="form-group">
-                    <label for="amount">Donation Amount (USD)</label>
-                    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
-                </div>
-                <button type="submit" class="donate-btn">Donate Now</button>
-            </form>
-        </section>
-        <section class="video-section" id="video">
-            <h2>Learn More About Us</h2>
-            <iframe id="youtubeVideo" width="900" height="506" 
-            src="https://www.youtube.com/embed/ShaopAK9rzA?si=08vbh6yNBhE4K3Yu&controls=1" 
-            frameborder="0" 
-            allow="encrypted-media; picture-in-picture" 
-            allowfullscreen>
-            </iframe>
-            <div class="video-controls">
-                <button onclick="toggleVideo()">Play/Pause</button>
-            </div>
-        </section>
-    </div>
-    <footer class="socials" id="socials">
-        <a href="https://www.facebook.com"><img src="facebook_logo-removebg-preview.png" alt="Facebook" class="social-logo"></a>
-        <a href="https://www.twitter.com"><img src="twitter_logo-removebg-preview.png" alt="Twitter" class="social-logo"></a>
-        <a href="https://www.instagram.com"><img src="instagram_logo-removebg-preview.png" alt="Instagram" class="social-logo"></a>
-        <a href="https://www.whatsapp.com"><img src="whatsapp_logo-removebg-preview.png" alt="WhatsApp" class="social-logo"></a>
-        <p>&copy; 2025 Empower Her Africa. All rights reserved.</p>
-    </footer>
-    <!-- Login Modal -->
-    <div id="auth-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Login</h2>
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="donate-btn">Login</button>
-            </form>
-        </div>
-    </div>
-    <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to Top">↑</button>
-    <!-- Loading Spinner -->
-    <div class="loading-spinner" id="loading-spinner"></div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header>
+<div class="logo-container">
+<img src="Empower Her Africa-Photoroom 1-Photoroom.png" alt="Empower Her Africa Logo" class="logo" loading="lazy"/>
+</div>
+<h1>Empower Her Africa</h1>
+</header>
+<nav aria-label="Main Navigation">
+<button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="primary-menu">&#9776;</button>
+<ul id="primary-menu">
+<li><a href="#mission">Mission</a></li>
+<li><a href="#aims">Aims (2025-2027)</a></li>
+<li><a href="#volunteer">Get Involved</a></li>
+<li><a href="#donate">Donate</a></li>
+<li><a href="#socials">Contact Us</a></li>
+<li>
+<div class="search-bar">
+<label for="search-input" class="sr-only">Search</label>
+<input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+<button onclick="searchSite()" aria-label="Search">Search</button>
+</div>
+</li>
+<li><button id="login-btn" class="donate-btn">Login</button></li>
+</ul>
+</nav>
+<div class="hero">
+<div class="slider-container">
+<div class="slider" id="slider">
+<img src="File-1487928249.jpg" alt="Empowerment Image 1" loading="lazy">
+<img src="p1020690-1_wide-f018d7cebff1b67189219224d0232cd694961d71.jpg" alt="Empowerment Image 2" loading="lazy">
+<img src="HAGEP-Kenya-630x473.jpg" alt="Empowerment Image 3" loading="lazy">
+</div>
+<div class="slider-navigation">
+<button class="arrow" id="prev" aria-label="Previous Slide">&#10094;</button>
+<button class="arrow" id="next" aria-label="Next Slide">&#10095;</button>
+</div>
+<div class="slider-dots" id="dots"></div>
+</div>
+</div>
+<div class="container" id="main-content">
+<section id="mission">
+<h2>Our Mission</h2>
+<p>Empowering girls through menstrual health education and resources.</p>
+</section>
+<section id="team" class="team-section">
+<h2>About Our CEO & Team</h2>
+<p>Mr. Jubel Sherif is the visionary founder and CEO of Empower Her Africa. As a passionate advocate for youth and girls' empowerment, he is committed to making a lasting impact in Liberia by addressing menstrual health, education, and social support for vulnerable girls. With experience in leadership and community engagement, he drives the mission of Empower Her Africa with dedication and innovation.</p>
+<p>Behind him stands a powerful team of passionate individuals who share the same vision. Our team is made up of skilled professionals, volunteers, and advocates working tirelessly to create opportunities for girls through education, mentorship, and sustainable development projects. Together, we are building a future where every girl has the support and resources she needs to thrive.</p>
+<div class="team-member">
+<img src="ceo.jpg" alt="CEO Image" loading="lazy">
+<h3>CEO Jubel Sherif</h3>
+<p>Founder & CEO</p>
+</div>
+<div class="team-member">
+<img src="team 1.jpg" alt="Team Member 1" loading="lazy">
+<h3>Team Member 1</h3>
+<p>Role</p>
+</div>
+<div class="team-member">
+<img src="WhatsApp Image 2025-02-06 at 04.47.24_73725c94.jpg" alt="Team Member 2" loading="lazy">
+<h3>Team Member 2</h3>
+<p>Role</p>
+</div>
+</section>
+<section id="aims">
+<h2>Our Aims (2025-2027)</h2>
+<div class="features">
+<div class="feature-box">Expand to 10 More Countries</div>
+<div class="feature-box">Distribute 50,000+ Pads Annually</div>
+<div class="feature-box">Increase Workshops to 1,000+</div>
+</div>
+<button class="donate-btn">Support Our Mission</button>
+</section>
+<section id="volunteer" class="volunteer-section">
+<h2>Become a Volunteer</h2>
+<p>Join us in making a difference. Sign up today!</p>
+<form id="volunteer-form">
+<div class="form-group">
+<label for="volunteer-name">Name</label>
+<input type="text" id="volunteer-name" name="volunteer-name" placeholder="Enter your name" required>
+</div>
+<div class="form-group">
+<label for="volunteer-surname">Lastname</label>
+<input type="text" id="volunteer-surname" name="volunteer-surname" placeholder="Enter your Lastname" required>
+</div>
+<div class="form-group">
+<label for="volunteer-email">Email</label>
+<input type="email" id="volunteer-email" name="volunteer-email" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label for="volunteer-phone">Phone Number</label>
+<input type="tel" id="volunteer-phone" name="volunteer-phone" placeholder="Enter your phone number" required>
+</div>
+<button type="submit" class="volunteer-btn">Sign Up</button>
+</form>
+</section>
+<section id="donate" class="donate-section">
+<h2>Support Our Cause</h2>
+<p>Your donation helps provide menstrual health education and supplies.</p>
+<form id="donation-form">
+<div class="form-group">
+<label for="full-name">Full Name</label>
+<input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label for="card-number">ATM Card Number</label>
+<input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+</div>
+<div class="form-group">
+<label for="amount">Donation Amount (USD)</label>
+<input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+</div>
+<button type="submit" class="donate-btn">Donate Now</button>
+</form>
+</section>
+<section class="video-section" id="video">
+<h2>Learn More About Us</h2>
+<iframe id="youtubeVideo" width="900" height="506"
+src="https://www.youtube.com/embed/ShaopAK9rzA?si=08vbh6yNBhE4K3Yu&controls=1"
+frameborder="0"
+allow="encrypted-media; picture-in-picture"
+allowfullscreen>
+</iframe>
+<div class="video-controls">
+<button onclick="playVideo()">Play</button>
+<button onclick="pauseVideo()">Pause</button>
+<button onclick="halfSize()">Half Size</button>
+<button onclick="normalSize()">Normal Size</button>
+</div>
+</section>
+</div>
+<footer class="socials" id="socials">
+<a href="https://www.facebook.com" aria-label="Facebook"><img src="facebook_logo-removebg-preview.png" alt="Facebook" class="social-logo"></a>
+<a href="https://www.twitter.com" aria-label="Twitter"><img src="twitter_logo-removebg-preview.png" alt="Twitter" class="social-logo"></a>
+<a href="https://www.instagram.com" aria-label="Instagram"><img src="instagram_logo-removebg-preview.png" alt="Instagram" class="social-logo"></a>
+<a href="https://www.whatsapp.com" aria-label="WhatsApp"><img src="whatsapp_logo-removebg-preview.png" alt="WhatsApp" class="social-logo"></a>
+<p>&copy; 2025 Empower Her Africa. All rights reserved.</p>
+</footer>
+<!-- Login Modal -->
+<div id="auth-modal" class="modal">
+<div class="modal-content">
+<span class="close" aria-label="Close">&times;</span>
+<h2>Login</h2>
+<form id="login-form">
+<div class="form-group">
+<label for="login-email">Email</label>
+<input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label for="login-password">Password</label>
+<input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
+</div>
+<button type="submit" class="donate-btn">Login</button>
+</form>
+</div>
+</div>
 </body>
 </html>
