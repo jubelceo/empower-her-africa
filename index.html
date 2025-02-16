@@ -30,6 +30,8 @@
 <li><a href="#volunteer">Get Involved</a></li>
 <li><a href="#donate">Donate</a></li>
 <li><a href="#socials">Contact Us</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#user-stories">User Stories</a></li>
 <li>
 <div class="search-bar">
 <label for="search-input" class="sr-only">Search</label>
@@ -114,6 +116,10 @@
 <section id="donate" class="donate-section">
 <h2>Support Our Cause</h2>
 <p>Your donation helps provide menstrual health education and supplies.</p>
+<div class="progress-container">
+<div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+<p class="progress-text">Raised <span id="progress-percentage">70</span>% of $10,000 goal</p>
+</div>
 <form id="donation-form">
 <div class="form-group">
 <label for="full-name">Full Name</label>
@@ -149,6 +155,62 @@ allowfullscreen>
 <button onclick="normalSize()">Normal Size</button>
 </div>
 </section>
+<section id="faq" class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+What is the mission of Empower Her Africa?
+</button>
+<div class="faq-answer">
+<p>Our mission is to empower girls through menstrual health education and resources, ensuring they have the support and supplies needed to manage their periods with dignity.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+How can I volunteer with Empower Her Africa?
+</button>
+<div class="faq-answer">
+<p>You can volunteer by signing up on our website and joining our team in various projects and initiatives aimed at supporting girls' education and health.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">
+Where does my donation go?
+</button>
+<div class="faq-answer">
+<p>Your donation goes towards providing menstrual health education, distributing pads, and supporting our workshops and programs for girls in need.</p>
+</div>
+</div>
+</section>
+<section id="user-stories" class="user-stories-section">
+<h2>User Stories</h2>
+<form id="story-form">
+<div class="form-group">
+<label for="story-name">Name</label>
+<input type="text" id="story-name" name="story-name" placeholder="Enter your name" required>
+</div>
+<div class="form-group">
+<label for="story-title">Title</label>
+<input type="text" id="story-title" name="story-title" placeholder="Enter your story title" required>
+</div>
+<div class="form-group">
+<label for="story-content">Story</label>
+<textarea id="story-content" name="story-content" placeholder="Enter your story" required></textarea>
+</div>
+<div class="form-group">
+<label for="story-image">Image (optional)</label>
+<input type="file" id="story-image" name="story-image" accept="image/*">
+</div>
+<button type="submit" class="donate-btn">Submit Story</button>
+</form>
+<div id="user-stories-display" class="user-stories-display">
+<!-- Approved stories will be displayed here -->
+</div>
+</section>
+<section id="timeline" class="timeline-section">
+
+<div id="timeline-container"></div>
+</section>
 </div>
 <footer class="socials" id="socials">
 <a href="https://www.facebook.com" aria-label="Facebook"><img src="facebook_logo-removebg-preview.png" alt="Facebook" class="social-logo"></a>
@@ -173,6 +235,14 @@ allowfullscreen>
 </div>
 <button type="submit" class="donate-btn">Login</button>
 </form>
+</div>
+</div>
+<!-- Chat Widget -->
+<div id="chat-widget" class="chat-widget">
+<button id="chat-toggle" class="chat-toggle">Chat with us!</button>
+<div id="chat-window" class="chat-window">
+<div id="chat-messages" class="chat-messages"></div>
+<input id="chat-input" type="text" placeholder="Type a message..." />
 </div>
 </div>
 </body>
