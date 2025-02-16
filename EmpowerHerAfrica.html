@@ -4,456 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empower Her Africa</title>
+    <meta name="description" content="Empower Her Africa is dedicated to empowering girls through menstrual health education and resources. Join us in making a difference.">
+    <meta name="keywords" content="Empower Her Africa, menstrual health, girls' education, empowerment, donate, volunteer">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Verlag&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Lora', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-
-        header {
-            text-align: center;
-            background:  rgb(231, 119, 33);/* Updated background color */
-            padding: 40px;
-            color: white;
-            position: relative;
-        }
-
-        .logo-container {
-            width: 180px;
-            height: 180px;
-            background: white; /* Updated logo background to white */
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px auto;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .logo-container:hover {
-            transform: scale(1.05);
-        }
-
-        .logo {
-            width: 120px;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.1);
-        }
-
-        h1 {
-            font-family: 'Verlag', sans-serif;
-            font-size: 32px;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ff6600;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-bar input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .search-bar button {
-            background: #ff6600;
-            color: white;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            margin-left: 10px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .search-bar button:hover {
-            background: #cc5500;
-        }
-
-        .hero {
-            position: relative;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            overflow: hidden;
-        }
-
-        .slider-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .slider {
-            display: flex;
-            width: 300%;
-            transition: transform 1s ease;
-        }
-
-        .slider img {
-            width: 33.33%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .slider-navigation {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            transform: translateY(-50%);
-            padding: 0 10px;
-        }
-
-        .arrow {
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border: none;
-            font-size: 30px;
-            border-radius: 50%;
-            transition: background 0.3s;
-        }
-
-        .arrow:hover {
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .slider-dots {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 5px;
-        }
-
-        .slider-dot {
-            width: 10px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .slider-dot.active {
-            background: white;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px 0;
-        }
-
-        section {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .feature-box {
-            width: 30%;
-            padding: 20px;
-            text-align: center;
-            background: linear-gradient(45deg, #ff6600, #ff3366);
-            color: white;
-            border-radius: 10px;
-            margin: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .donate-section, .volunteer-section, .contact-section {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            text-align: center;
-            width: 50%;
-        }
-
-        .donate-btn, .volunteer-btn, .contact-btn {
-            background: #ff6600;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.3s ease;
-        }
-
-        .donate-btn:hover, .volunteer-btn:hover, .contact-btn:hover {
-            background: #cc5500;
-            transform: scale(1.05);
-        }
-
-        .socials {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-        }
-
-        .socials a {
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        .social-logo {
-            width: 40px;
-            height: 40px;
-            transition: opacity 0.3s ease;
-        }
-
-        .socials a:hover .social-logo {
-            opacity: 0.7;
-        }
-
-        .team-section {
-            padding: 50px 0;
-            background-color: #f4f4f4;
-        }
-
-        .team-member {
-            display: inline-block;
-            margin: 20px;
-            width: 250px; /* Adjusted width for better spacing */
-            text-align: center;
-        }
-
-        .team-member img {
-            width: 200px; /* Equal size for all team images */
-            height: 265px; /* Adjusted height to show chest to head */
-            border-radius: 10px; /* Changed to square with rounded corners */
-            object-fit: cover; /* Ensures images are not distorted */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .team-member img:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .team-member h3 {
-            font-size: 18px;
-            margin: 10px 0 5px;
-            color: #333;
-        }
-
-        .team-member p {
-            font-size: 14px;
-            color: #777;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            border-color: #ff6600;
-            outline: none;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            text-align: center;
-        }
-
-        .close {
-            float: right;
-            cursor: pointer;
-            font-size: 24px;
-        }
-
-        /* Updated Video Section Styles */
-        .video-section {
-            position: relative;
-            padding: 40px 0;
-            background: linear-gradient(135deg, #ff6600, #ff3366);
-            border-radius: 10px;
-            margin: 40px auto;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-
-        .video-section h2 {
-            font-family: 'Verlag', sans-serif;
-            font-size: 32px;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-section iframe {
-            width: 900px;
-            height: 506px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .video-section iframe:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .video-controls {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .video-section:hover .video-controls {
-            opacity: 1;
-        }
-
-        .video-controls button {
-            background: rgba(255, 255, 255, 0.8);
-            color: #333;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s, transform 0.3s ease;
-        }
-
-        .video-controls button:hover {
-            background: white;
-            transform: scale(1.1);
-        }
-    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="Empower Her Africa-Photoroom 1-Photoroom.png" alt="Empower Her Africa Logo" class="logo"/>
+            <img src="Empower Her Africa-Photoroom 1-Photoroom.png" alt="Empower Her Africa Logo" class="logo" loading="lazy"/>
         </div>
         <h1>Empower Her Africa</h1>
     </header>
     <nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
         <ul>
             <li><a href="#mission">Mission</a></li>
             <li><a href="#aims">Aims (2025-2027)</a></li>
             <li><a href="#volunteer">Get Involved</a></li>
             <li><a href="#donate">Donate</a></li>
-            <li><a href="#socials">Contact Us</a></li> <!-- Updated to link to socials section -->
+            <li><a href="#socials">Contact Us</a></li>
             <li>
                 <div class="search-bar">
                     <input type="text" id="search-input" placeholder="Search...">
-                    <button onclick="searchSite()">Search</button>
+                    <button onclick="searchSite()" aria-label="Search">Search</button>
                 </div>
             </li>
             <li><button id="login-btn" class="donate-btn">Login</button></li>
@@ -462,18 +37,18 @@
     <div class="hero">
         <div class="slider-container">
             <div class="slider" id="slider">
-                <img src="File-1487928249.jpg" alt="Empowerment Image 1">
-                <img src="p1020690-1_wide-f018d7cebff1b67189219224d0232cd694961d71.jpg" alt="Empowerment Image 2">
-                <img src="HAGEP-Kenya-630x473.jpg" alt="Empowerment Image 3">
+                <img src="File-1487928249.jpg" alt="Empowerment Image 1" loading="lazy">
+                <img src="p1020690-1_wide-f018d7cebff1b67189219224d0232cd694961d71.jpg" alt="Empowerment Image 2" loading="lazy">
+                <img src="HAGEP-Kenya-630x473.jpg" alt="Empowerment Image 3" loading="lazy">
             </div>
             <div class="slider-navigation">
-                <button class="arrow" id="prev">&#10094;</button>
-                <button class="arrow" id="next">&#10095;</button>
+                <button class="arrow" id="prev" aria-label="Previous Slide" aria-hidden="true">&#10094;</button>
+                <button class="arrow" id="next" aria-label="Next Slide" aria-hidden="true">&#10095;</button>
             </div>
             <div class="slider-dots" id="dots"></div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="main-content">
         <section id="mission">
             <h2>Our Mission</h2>
             <p>Empowering girls through menstrual health education and resources.</p>
@@ -482,19 +57,18 @@
             <h2>About Our CEO & Team</h2>
             <p>Mr. Jubel Sherif is the visionary founder and CEO of Empower Her Africa. As a passionate advocate for youth and girls' empowerment, he is committed to making a lasting impact in Liberia by addressing menstrual health, education, and social support for vulnerable girls. With experience in leadership and community engagement, he drives the mission of Empower Her Africa with dedication and innovation.</p>
             <p>Behind him stands a powerful team of passionate individuals who share the same vision. Our team is made up of skilled professionals, volunteers, and advocates working tirelessly to create opportunities for girls through education, mentorship, and sustainable development projects. Together, we are building a future where every girl has the support and resources she needs to thrive.</p>
-
             <div class="team-member">
-                <img src="ceo.jpg" alt="CEO Image">
+                <img src="ceo.jpg" alt="CEO Jubel Sherif - Founder & CEO" loading="lazy">
                 <h3>CEO Jubel Sherif</h3>
                 <p>Founder & CEO</p>
             </div>
             <div class="team-member">
-                <img src="team 1.jpg" alt="Team Member 1">
+                <img src="team 1.jpg" alt="Team Member 1 - Role" loading="lazy">
                 <h3>Team Member 1</h3>
                 <p>Role</p>
             </div>
             <div class="team-member">
-                <img src="WhatsApp Image 2025-02-06 at 04.47.24_73725c94.jpg" alt="Team Member 2">
+                <img src="WhatsApp Image 2025-02-06 at 04.47.24_73725c94.jpg" alt="Team Member 2 - Role" loading="lazy">
                 <h3>Team Member 2</h3>
                 <p>Role</p>
             </div>
@@ -517,8 +91,8 @@
                     <input type="text" id="volunteer-name" name="volunteer-name" placeholder="Enter your name" required>
                 </div>
                 <div class="form-group">
-                    <label for="volunteer-surname">Surname</label>
-                    <input type="text" id="volunteer-surname" name="volunteer-surname" placeholder="Enter your surname" required>
+                    <label for="volunteer-surname">Lastname</label>
+                    <input type="text" id="volunteer-surname" name="volunteer-surname" placeholder="Enter your Lastname" required>
                 </div>
                 <div class="form-group">
                     <label for="volunteer-email">Email</label>
@@ -563,21 +137,17 @@
             allowfullscreen>
             </iframe>
             <div class="video-controls">
-                <button onclick="playVideo()">Play</button>
-                <button onclick="pauseVideo()">Pause</button>
-                <button onclick="halfSize()">Half Size</button>
-                <button onclick="normalSize()">Normal Size</button>
+                <button onclick="toggleVideo()">Play/Pause</button>
             </div>
         </section>
     </div>
-    <footer class="socials" id="socials"> <!-- Added id="socials" for linking -->
+    <footer class="socials" id="socials">
         <a href="https://www.facebook.com"><img src="facebook_logo-removebg-preview.png" alt="Facebook" class="social-logo"></a>
         <a href="https://www.twitter.com"><img src="twitter_logo-removebg-preview.png" alt="Twitter" class="social-logo"></a>
         <a href="https://www.instagram.com"><img src="instagram_logo-removebg-preview.png" alt="Instagram" class="social-logo"></a>
         <a href="https://www.whatsapp.com"><img src="whatsapp_logo-removebg-preview.png" alt="WhatsApp" class="social-logo"></a>
-        <p>&copy; 2023 Empower Her Africa. All rights reserved.</p>
+        <p>&copy; 2025 Empower Her Africa. All rights reserved.</p>
     </footer>
-
     <!-- Login Modal -->
     <div id="auth-modal" class="modal">
         <div class="modal-content">
@@ -596,110 +166,9 @@
             </form>
         </div>
     </div>
-
-    <script>
-        // Smooth Scrolling for Navigation Links
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Image Slider Functionality
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        const slider = document.getElementById('slider');
-        const dotsContainer = document.getElementById('dots');
-        let currentSlide = 0;
-
-        function updateSlider() {
-            slider.style.transform = `translateX(-${currentSlide * 33.33}%)`;
-            const dots = document.querySelectorAll('.slider-dot');
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentSlide].classList.add('active');
-        }
-
-        function createDots() {
-            const slideCount = slider.children.length;
-            for (let i = 0; i < slideCount; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('slider-dot');
-                dot.addEventListener('click', () => {
-                    currentSlide = i;
-                    updateSlider();
-                });
-                dotsContainer.appendChild(dot);
-            }
-            updateSlider();
-        }
-
-        prevButton.addEventListener('click', () => {
-            currentSlide = (currentSlide === 0) ? slider.children.length - 1 : currentSlide - 1;
-            updateSlider();
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentSlide = (currentSlide === slider.children.length - 1) ? 0 : currentSlide + 1;
-            updateSlider();
-        });
-
-        createDots();
-
-        // Modal Functionality
-        const modal = document.getElementById('auth-modal');
-        const loginBtn = document.getElementById('login-btn');
-        const closeBtn = document.querySelector('.close');
-
-        loginBtn.addEventListener('click', () => {
-            modal.style.display = 'block';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Search Functionality
-        function searchSite() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                if (section.textContent.toLowerCase().includes(query)) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        }
-
-        // Video Controls Functionality
-        function playVideo() {
-            let iframe = document.getElementById('youtubeVideo');
-            iframe.src += "&autoplay=1";
-        }
-
-        function pauseVideo() {
-            let iframe = document.getElementById('youtubeVideo');
-            iframe.src = iframe.src.replace("&autoplay=1", "");
-        }
-
-        function halfSize() {
-            let iframe = document.getElementById('youtubeVideo');
-            iframe.width = 450;
-            iframe.height = 253;
-        }
-
-        function normalSize() {
-            let iframe = document.getElementById('youtubeVideo');
-            iframe.width = 900;
-            iframe.height = 506;
-        }
-    </script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">↑</button>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loading-spinner"></div>
 </body>
 </html>
