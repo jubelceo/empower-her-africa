@@ -206,5 +206,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     timeline.setItems(items);
 });
-
-
