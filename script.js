@@ -206,3 +206,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     timeline.setItems(items);
 });
+
+// Scroll-Triggered Animations
+const scrollElements = document.querySelectorAll('.scroll-trigger');
+const scrollCallback = (entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
+        }
+    });
+};
+
+const observer = new IntersectionObserver(scrollCallback, { threshold: 0.1 });
+scrollElements.forEach(element => {
+    observer.observe(element);
+});
+
