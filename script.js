@@ -99,3 +99,14 @@ document.getElementById('donation-form').addEventListener('submit', (e) => {
         alert('Please fill out all required fields.');
     }
 });
+
+// FAQ Toggle Functionality
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !isExpanded);
+        answer.style.maxHeight = isExpanded ? '0' : answer.scrollHeight + 'px';
+    });
+});
+
