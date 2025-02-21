@@ -223,4 +223,3 @@ const observer = new IntersectionObserver(scrollCallback, { threshold: 0.1 });
 scrollElements.forEach(element => {
     observer.observe(element);
 });
-
